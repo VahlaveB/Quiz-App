@@ -20,3 +20,4 @@ $ mvn spring-boot:run
 - URL for the Database Memory console: http://localhost:8083/h2-ui
 - username: sa
 - password: password
+- JDBC URL: jdbc:h2:mem:quiz-db

@@ -1,24 +1,19 @@
 package com.quiz.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-@Entity
-@Getter
-@Setter
+import javax.persistence.*;
+
+@Data  // This annotates both setter and getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "questions")
+@Entity
 public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long  id;
     private String question;
     private String wrongAnswer1;
     private String wrongAnswer2;
